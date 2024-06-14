@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>redline</title>
+    <style>
+        html, body, canvas, div {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            background-image: url("data:image/svg+xml;utf8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26' width='26' height='26' fill='none' stroke='%23f1f5f9'%3e%3ccircle cx='13' cy='13' r='1.2' fill='%23f1f5f9' stroke='none' /%3e%3c/svg%3e")
+        }
+
+
+        .tips {
+            position: fixed;
+            bottom: 5%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 2rem;
+            cursor: pointer;
+            width: 50px;
+            height: 50px;
+            background: #ffffff;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.38);
+            border-radius: 50px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            z-index: 99999;
+            transition: all 0.3s;
+        }
+        .tips .hi{
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+        }
+        .tips .content{
+            width:100%;
+            font-size: 14px;
+            text-align: center;
+            font-weight: lighter;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+        .tips:hover {
+            width: 100px;
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+<div class="tips">
+    <div class="hi">❓</div>
+    <div class="content">the red line will go around you forever.</div>
+</div>
+<script>
+    window.redline = {
+        Debugging: false,
+        lineNumber: 5
+    }
+</script>
+<script src="index.js"></script>
+</body>
+</html>
